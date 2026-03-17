@@ -1,0 +1,266 @@
+/* Work.css */
+
+/* Reset and body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  color: white;
+}
+
+/* Glassmorphism Navbar */
+.navbar, .glass-nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 15px 0;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-icon {
+  font-size: 1.5rem;
+}
+
+.brand-name {
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  background: linear-gradient(to right, #00d4ff, #00ffaa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links li a:hover, .nav-links li a.active {
+  color: #00d4ff;
+}
+
+.nav-date {
+  background: rgba(0, 212, 255, 0.15);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #00d4ff;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+/* Main wrapper */
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+
+/* Inputs */
+.city-input {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 12px 20px;
+  color: white;
+  width: 100%;
+  max-width: 300px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.city-input:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #00d4ff;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+/* Buttons */
+.submit-btn {
+  background: #00d4ff;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 50px;
+  color: #0f2027;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-transform: uppercase;
+  max-width: 100%;
+}
+
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
+}
+
+/* Weather card */
+#weather-info {
+  margin-top: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 40px;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  animation: slideUp 0.6s ease-out;
+}
+
+#weather-info h3 {
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  color: #00d4ff;
+}
+
+.weather-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.weather-detail:last-child {
+  border-bottom: none;
+}
+
+.temp-text {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 10px 0;
+  background: -webkit-linear-gradient(#fff, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive adjustments */
+
+@media (max-width: 1024px) {
+  .nav-container {
+    padding: 0 20px;
+  }
+
+  .brand-name {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .main-wrapper {
+    padding-top: 40px;
+  }
+
+  .city-input {
+    max-width: 250px;
+    padding: 10px 15px;
+  }
+
+  .submit-btn {
+    padding: 10px 30px;
+  }
+
+  #weather-info {
+    max-width: 320px;
+    padding: 30px;
+  }
+
+  .temp-text {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .main-wrapper {
+    padding-top: 30px;
+  }
+
+  .city-input {
+    max-width: 90%;
+  }
+
+  #weather-info {
+    width: 90%;
+    padding: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-name {
+    font-size: 0.9rem;
+  }
+
+  .city-input {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .submit-btn {
+    font-size: 0.9rem;
+    padding: 8px 25px;
+  }
+
+  #weather-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .temp-text {
+    font-size: 2rem;
+  }
+
+  .weather-detail {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+}
