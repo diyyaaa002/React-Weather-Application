@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/React-Weather-Application/static/css/main.fcf3f413.css",
-    "main.js": "/React-Weather-Application/static/js/main.14f51450.js",
-    "static/js/453.85e5e0ca.chunk.js": "/React-Weather-Application/static/js/453.85e5e0ca.chunk.js",
-    "index.html": "/React-Weather-Application/index.html",
-    "main.fcf3f413.css.map": "/React-Weather-Application/static/css/main.fcf3f413.css.map",
-    "main.14f51450.js.map": "/React-Weather-Application/static/js/main.14f51450.js.map",
-    "453.85e5e0ca.chunk.js.map": "/React-Weather-Application/static/js/453.85e5e0ca.chunk.js.map"
+    "main.css": "/React-Automatic-Password-Generator/static/css/main.6d53759b.css",
+    "main.js": "/React-Automatic-Password-Generator/static/js/main.25314ea6.js",
+    "static/js/453.85e5e0ca.chunk.js": "/React-Automatic-Password-Generator/static/js/453.85e5e0ca.chunk.js",
+    "index.html": "/React-Automatic-Password-Generator/index.html",
+    "main.6d53759b.css.map": "/React-Automatic-Password-Generator/static/css/main.6d53759b.css.map",
+    "main.25314ea6.js.map": "/React-Automatic-Password-Generator/static/js/main.25314ea6.js.map",
+    "453.85e5e0ca.chunk.js.map": "/React-Automatic-Password-Generator/static/js/453.85e5e0ca.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fcf3f413.css",
-    "static/js/main.14f51450.js"
+    "static/css/main.6d53759b.css",
+    "static/js/main.25314ea6.js"
   ]
 }
