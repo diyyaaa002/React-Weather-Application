@@ -1,0 +1,183 @@
+/* ------------------------
+   GLOBAL STYLES
+-------------------------*/
+body {
+  background: linear-gradient(135deg, #ced4da, #b9c1c9, #a8b0ba);
+  font-family: "Inter", sans-serif;
+  color: #1e1e1e;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Center wrapper */
+.todo-container {
+  width: 90%;
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background: rgba(240, 240, 240, 0.65);
+  border-radius: 20px;
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Title */
+h1 {
+  font-size: 34px;
+  margin-bottom: 25px;
+  color: #004b8d;
+  font-weight: 700;
+  text-align: left;
+}
+
+/* ------------------------
+   FORM INPUT STYLES
+-------------------------*/
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #222;
+  text-align: left;   /* LEFT align labels */
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #222;
+  border: 1px solid #bfc7d1;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  transition: 0.25s ease;
+}
+
+input:hover,
+select:hover {
+  border-color: #88a4d6;
+}
+
+input:focus,
+select:focus {
+  border-color: #4b7cc4;
+  box-shadow: 0 0 10px rgba(75, 124, 196, 0.25);
+  outline: none;
+}
+
+/* Radio group – KEEP SAME LINE */
+/* Radio group – horizontal layout with spacing */
+.priority-group {
+  display: flex;
+  gap: 25px;         /* space between buttons */
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.priority-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;          /* small space between radio and text */
+  font-weight: 500;
+  color: #333;
+}
+
+
+/* ------------------------
+   BUTTONS
+-------------------------*/
+button {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #31b765, #249353);
+  color: #fff;
+}
+
+.btn-success:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(39, 153, 87, 0.28);
+}
+
+.btn-warning {
+  background: linear-gradient(135deg, #ffbe48, #d99c32);
+  color: #333;
+  margin-right: 8px;
+}
+
+.btn-warning:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(231, 179, 66, 0.28);
+}
+
+/* ------------------------
+   TABLE
+-------------------------*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+thead {
+  background: linear-gradient(135deg, #dbe4f1, #cdd8e8);
+}
+
+thead th {
+  padding: 14px;
+  color: #0f4c81;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: left;  /* LEFT align headers */
+}
+
+tbody td {
+  padding: 12px;
+  text-align: left;  /* LEFT align table data */
+  background: rgba(255, 255, 255, 0.65);
+  border-bottom: 1px solid #d4d9e2;
+}
+
+/* Status colors */
+.table-danger {
+  background: rgba(235, 80, 80, 0.18) !important;
+}
+
+.table-success {
+  background: rgba(60, 180, 110, 0.18) !important;
+}
+
+.table-info {
+  background: rgba(60, 140, 210, 0.18) !important;
+}
+
+/* ------------------------
+   RESPONSIVE
+-------------------------*/
+@media (max-width: 768px) {
+  .todo-container {
+    width: 95%;
+    padding: 20px;
+  }
+  
+  button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 28px;
+  }
+}

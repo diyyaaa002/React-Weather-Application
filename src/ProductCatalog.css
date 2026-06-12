@@ -1,0 +1,12 @@
+#Div1
+{
+    height: 500px;
+    width: 500px;
+    border: black double 7px;
+}
+.main
+{
+    display: flex;
+    gap: 5px;
+    
+}

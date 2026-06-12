@@ -1,0 +1,203 @@
+/* Mini_Calender.css */
+
+/* Body background */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+}
+
+/* Calendar container */
+.Mini_Calender, body > div {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Month header */
+h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  color: #333;
+  position: relative;
+}
+
+/* Prev / Next buttons on right side */
+button {
+  font-family: 'Poppins', sans-serif;
+  padding: 6px 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* Navigation buttons */
+button.nav {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  transition: background 0.2s;
+}
+button.nav:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Calendar grid */
+.calender {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  margin-top: 20px;
+}
+
+/* Individual day boxes */
+.day {
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 15px 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* Hover effect for day */
+.day:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Selected day style */
+.day.selected {
+  border: 2px solid #ff6b6b;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Empty day for weekday alignment */
+.day.empty {
+  background: transparent;
+  cursor: default;
+}
+
+/* Events inside days */
+.event {
+  margin-top: 5px;
+  padding: 4px 6px;
+  border-radius: 10px;
+  color: white;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Delete 'x' button inside events */
+.event span {
+  cursor: pointer;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+/* Input and save button */
+input, button {
+  font-family: 'Poppins', sans-serif;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  margin-right: 5px;
+}
+
+/* Save button hover */
+button {
+  background: #ff6b6b;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #ff4b4b;
+}
+
+/* Responsive for tablet */
+@media screen and (max-width: 768px) {
+  .calender {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  .day {
+    min-height: 70px;
+    padding: 10px;
+  }
+}
+
+/* Responsive for mobile */
+@media screen and (max-width: 480px) {
+  .calender {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .day {
+    min-height: 60px;
+    padding: 8px;
+  }
+  input, button {
+    font-size: 0.8rem;
+    padding: 5px 8px;
+  }
+}
+.month-nav {
+  display: flex;
+  justify-content: flex-end; /* aligns everything to the right */
+  align-items: center;
+  gap: 10px; /* space between Month text and buttons */
+  margin-bottom: 10px;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 5px; /* space between prev and next buttons */
+}
+
+.nav-buttons button {
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  transition: 0.2s;
+}
+
+.nav-buttons button:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+.day-names {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  margin-bottom: 5px;
+}
+
+.day-name {
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+.swal2-container {
+  z-index: 9999 !important;
+}

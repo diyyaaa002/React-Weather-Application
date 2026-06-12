@@ -1,0 +1,131 @@
+import React from 'react'
+import axios from 'axios'
+function  Axios_Practice_Session(){
+    const [Data,SetData]=React.useState()
+    const [FormData,SetFormData]=React.useState({
+        title:"",
+        price:"",
+        description:"",
+        category:"",
+        image:""
+    })
+    const HandleClick=(e)=>{
+        SetFormData({
+            ...FormData,
+            [e.target.name]:e.target.value
+        })
+        console.log("Events",e.target.name,e.target.value)
+    }
+    return(
+<div><center>
+<label>Title</label>
+<input  
+name='title'
+value={FormData.title}
+onChange={HandleClick}
+/>
+<br/><br/><br/><br/>
+<label>Price</label>
+<input  
+value={FormData.price}
+onChange={HandleClick}
+name='price'/>
+<br/><br/><br/><br/>
+<label>Description</label>
+<input  
+value={FormData.description}
+onChange={HandleClick}
+name='description'/>
+<br/><br/><br/><br/>
+<label>Category</label>
+<input  
+value={FormData.category}
+onChange={HandleClick}
+name='category'/>
+<br/><br/><br/><br/>
+<label>Image</label>
+<input  
+value={FormData.image}
+onChange={HandleClick}
+name='image'/>
+<br/><br/><br/><br/>
+<button
+onClick={()=>{
+axios.post("https://fakestoreapi.com/products",FormData)
+.then((res)=>{
+    console.log("Data",res.data)
+})
+.catch((err)=>{
+    console.log("Error",err)
+})
+}}>Post</button>
+<button
+onClick={()=>{
+    axios.get("https://fakestoreapi.com/products")
+    .then((res)=>{
+        SetData(res.data)
+    })
+    .catch((err)=>{
+        console.log("Error",err)
+    })
+    console.log("Button Clicked")
+}}>
+    Get
+</button>
+
+<br/><br/><br/>
+<button
+onClick={()=>{
+    axios.delete("https://fakestoreapi.com/products/1",FormData)
+    .then((res)=>{
+        console.log('Data',res.data)
+    })
+    .catch((err)=>{
+        console.log("Error",err)
+    })
+}}>
+    Delete
+</button>
+<br/><br/><br/>
+<button
+onClick={()=>{
+    axios.put("https://fakestoreapi.com/products/3",FormData)
+    .then((res)=>{
+        console.log('Data',res.data)
+    })
+    .catch((err)=>{
+        console.log("Error",err)
+    })
+}}>
+    Put
+</button>
+<br/><br/>
+<table border={5}>
+    <thead>
+        <tr>
+            <th>title</th>
+             <th>price</th>
+              <th>description</th>
+               <th>category</th>
+                <th>image</th>
+        </tr>
+    </thead>
+    <tbody>
+       {Data && Data.map((val)=>(
+        <tr>
+            <td>{val.title}</td>
+            <td>{val.price}</td>
+            <td>{val.description}</td>
+            <td>{val.category}</td>
+             <td>
+                <img src='val.image' alt='img'/>
+             </td>
+        </tr>
+       ))}
+    </tbody>
+</table>
+</center>
+</div>
+    )
+}
+export default  Axios_Practice_Session;

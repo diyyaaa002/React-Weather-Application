@@ -1,0 +1,11 @@
+#mydiv
+{
+    border: 5px blue double;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-direction: column;
+    height: 100px;
+    width: 100px;
+}

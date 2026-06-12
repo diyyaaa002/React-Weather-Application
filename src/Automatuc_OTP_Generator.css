@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #b4bbce, #64799c, #677891);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.otp-container {
+  width: 380px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 30px 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+}
+
+.otp-container h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.otp-display {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.otp-display input {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 20px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  text-align: center;
+  letter-spacing: 4px;
+}
+
+.otp-display input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.copy-btn,
+.generate-btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.copy-btn {
+  width: 48px;
+  height: 48px;
+  background: #38bdf8;
+  color: white;
+  font-size: 18px;
+}
+
+.copy-btn:hover {
+  transform: scale(1.08);
+}
+
+.length-box {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.length-box label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 15px;
+  color: #e2e8f0;
+}
+
+.length-box input {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+}
+
+.generate-btn {
+  width: 100%;
+  padding: 13px;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.generate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(34, 197, 94, 0.35);
+}

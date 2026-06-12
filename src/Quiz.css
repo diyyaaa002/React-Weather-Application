@@ -1,0 +1,168 @@
+
+.quiz-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 40px;
+  background: linear-gradient(135deg, #a8c0ff, #3f2b96);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.quiz-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+
+.quiz-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  pointer-events: none;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  transition: box-shadow 0.4s ease;
+}
+
+
+.quiz-container h2 {
+  background: #ff7e5f;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  color: white;
+  padding: 15px 20px;
+  border-radius: 15px;
+  text-align: center;
+  margin: 0 0 15px 0;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1s ease;
+}
+
+
+.quiz-container h3 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  animation: slideIn 1s ease-out;
+}
+
+
+.option {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 20px;
+  margin: 10px 0;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Hover Effect for Options */
+.option:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Radio Button Styling */
+.option input[type="radio"] {
+  transform: scale(1.4);
+  accent-color: #ff7e5f;
+  transition: transform 0.2s ease;
+}
+
+/* Hover Effect on Radio Button */
+.option input[type="radio"]:hover {
+  transform: scale(1.6);
+}
+
+
+.submit-button {
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  color: white;
+  padding: 16px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: background 0.4s ease, transform 0.3s ease;
+  display: block;
+  margin: 30px auto 0;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  animation: bounce 0.5s infinite alternate;
+}
+
+
+.submit-button:hover {
+  background: #ff4c4c;
+  transform: scale(1.05);
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+
+@media (max-width: 600px) {
+  .quiz-container {
+    padding: 20px;
+  }
+
+  .quiz-container h2 {
+    font-size: 20px;
+  }
+
+  .quiz-container h3 {
+    font-size: 18px;
+  }
+
+  .submit-button {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
